@@ -1,0 +1,35 @@
+온도 측정 범위 -40 ~ 80℃ *오차 0.5℃
+습도 측정 범위 0 ~ 100% *오차 2%
+측정 간격 2초
+
+핀 맵
+1 VCC
+2 DATA
+3 X
+4 GND
+
+!! 사용시 1, 2핀 사이에 10KΩ 저항을 사용해야 한다는데
+저는 그냥 사용했는데 문제 없었습니다.
+혹시 모르니 사용 시 저항을 연결해주세요
+
+사용 라이브러리
+1. Adafruit(https://github.com/adafruit/Adafruit_CircuitPython_DHT)
+
+git clone https://github.com/adafruit/Adafruit_CircuitPython_DHT.git
+
+Python3 dht_simpletest.py 로 실행. (python으로 실행 시 오류 발생!)
+
+!! importerror: cannot import name beaglebone_black_driver 발생 시 
+
+https://stackoverflow.com/questions/63232072/cannot-import-name-beaglebone-black-driver-from-adafruit-dht
+
+위 링크 참고
+
+라즈베리파이4B+는 
+
+"/usr/local/lib/python3.7/dist-packages/Adafruit_DHT/platform_detect.py"의 line #112에  
+
+elif match.group(1) == 'BCM2711':
+    return 3
+
+를 추가해 주어야 정상적으로 동작한다고 함.
