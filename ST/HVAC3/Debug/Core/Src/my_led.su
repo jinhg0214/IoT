@@ -1,0 +1,4 @@
+my_led.c:11:6:led_init	8	static
+my_led.c:20:6:led_out	16	static
+my_led.c:24:6:led_one_sec	16	static
+my_led.c:31:6:led_all_on	8	static
