@@ -3,9 +3,6 @@
 2021년 11월 22일 ~ 2021년 11월 26일 
 
 ---
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4fd6aa33-3a1a-4a49-b432-1f8a99ab9866/Untitled.png)
-
 # 1. 개요
 
 - 라즈베리파이와 AWS를 이용한 무선 조종 차량 구현 프로젝트
@@ -22,7 +19,6 @@
 
 ## 2-1. 사용 기술 스택
 
-![사용기술.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2d2376aa-20a6-498e-8f8d-bea69d700aaa/사용기술.png)
 
 - AWS, MySQL, Python3, Pyqt5, Rasberry OS, Google Speech-to-Text, Node.js, Vue
 
@@ -38,7 +34,7 @@
 
 - 1.RC Car
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1156658c-fa46-4608-aee5-10e8cc200227/Untitled.png)
+    
     
     - 무선 제어 자동차는 차량의 움직임을 구현하기 위해, DC모터와 서보 모터를 가진다.
         - DC모터는 차량의 전진 및 후진을, 서보 모터는 조향을 담당한다.
@@ -72,7 +68,6 @@
         
 - 2.GUI
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0c3bcdf9-96b3-4b4a-9e5a-2934687e24a5/Untitled.png)
     
     - 라즈베리파이 4B를 이용해 구현.
     - PyQT5를 이용하여 인터페이스를 구현하였다.
@@ -81,7 +76,6 @@
     데이터들을 GUI에 출력한다.
 - 3.WEB Visualizer
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8bb8ab5a-16f0-4126-a27d-b7c444f13168/Untitled.png)
     
     - DB의 값을 읽고, 이를 시각화 하는 웹사이트를 구성하였다.
     - Node.js기반 Local 웹 서버를 운영하였다.
