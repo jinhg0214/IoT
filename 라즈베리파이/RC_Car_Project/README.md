@@ -5,37 +5,36 @@
 ---
 # 1. 개요
 
+![화면 캡처 2021-11-27 174106](https://user-images.githubusercontent.com/70011316/143674584-94aeff4a-7333-40fd-9a9a-69279c9bfef6.jpg)
+![이미지1](https://user-images.githubusercontent.com/70011316/143674591-e55152d7-4ccd-4d1e-9798-82ffa0c0befe.jpg)
+
 - 라즈베리파이와 AWS를 이용한 무선 조종 차량 구현 프로젝트
 - 라즈베이파이4B를 이용하여 각종 모터들로 차량의 움직임을 구현하고, 별도의 센서들을 부착하여 정보들을 수집함.
 - 3D 프린팅을 이용하여 차량의 프레임을 제작
-
-[[서울 15반 2조] RC CAR 프로젝트](https://youtu.be/IvJfMl0JzaM)
-
-프로젝트 시연 영상
+- 프로젝트 시연 영상 링크(https://youtu.be/IvJfMl0JzaM)
 
 ---
 
 ## 2. 본론
 
-## 2-1. 사용 기술 스택
+## 2-1. 사용 기술 스택   
 
-
+![사용기술](https://user-images.githubusercontent.com/70011316/143674623-42ca8f34-bc02-4a28-89a4-1260995243b2.png)
 - AWS, MySQL, Python3, Pyqt5, Rasberry OS, Google Speech-to-Text, Node.js, Vue
 
 ## 2-2. 시스템 설명
 
-### 프로젝트 시나리오
+### 프로젝트 시나리오   
 
+![이미지2](https://user-images.githubusercontent.com/70011316/143674636-85decec3-0893-4e0e-ba2a-e40d505ef776.jpg)
 1. 사용자는 RC 카 조종기를 이용해 차량에 명령을 전송한다.
 2. 차량은 이 명령을 수행하여 움직이는 동시에, 각종 센서들을 이용해 데이터들을 수집한다.
 3. 수집한 데이터들은 RC카 조종기에 보여주는 동시에, 다른곳에서도 웹 시각화를 통해 보여준다.
 
 ### 시스템 구조
 
-- 1.RC Car
-    
-    
-    
+- 1.RC Car   
+    ![mode3 - 기압,온도,습도 측정](https://user-images.githubusercontent.com/70011316/143674659-3b386d5e-01b1-4b5d-af9e-e5a3cd5ea2bc.jpg)
     - 무선 제어 자동차는 차량의 움직임을 구현하기 위해, DC모터와 서보 모터를 가진다.
         - DC모터는 차량의 전진 및 후진을, 서보 모터는 조향을 담당한다.
         - 이 모터의 제어는 Adafruit-MotorHAT 라이브러리를 이용한다
@@ -66,17 +65,15 @@
             - 센스햇의 LED Matrix에 기울기 변화를 출력한다
             
         
-- 2.GUI
-    
-    
+- 2.GUI   
+    ![GUI](https://user-images.githubusercontent.com/70011316/143674647-fa42e975-fa44-445b-a9bb-c0b40670261e.jpg)    
     - 라즈베리파이 4B를 이용해 구현.
     - PyQT5를 이용하여 인터페이스를 구현하였다.
     - 인터페이스를 통해 버튼을 누르면, AWS의 데이터베이스 명령어 테이블에 명령을 저장한다.
     - 또한, DB의 명령어 테이블에 저장되어 있는 명령어들과, 센싱 테이블로부터 데이터를 가져와 
     데이터들을 GUI에 출력한다.
-- 3.WEB Visualizer
-    
-    
+- 3.WEB Visualizer   
+    ![web](https://user-images.githubusercontent.com/70011316/143674661-bc836aff-c7ea-4eb3-8b9c-dc21c8dfd4a3.gif)
     - DB의 값을 읽고, 이를 시각화 하는 웹사이트를 구성하였다.
     - Node.js기반 Local 웹 서버를 운영하였다.
     - Node.js로 DB에 접속한 후에, DB서버에서 Client로 데이터를 실시간으로 전송한다.
