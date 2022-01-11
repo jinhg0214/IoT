@@ -1,4 +1,15 @@
 ## 파일무시
 
 ##
+.vs/
+*.log
+*.lock
+ST/.metadata/.log4j.xml
+ST/.metadata/
+*.cproject
+*.mxproject
+*.project
+*.launch
+*.ioc
+*.ld
 ST/
